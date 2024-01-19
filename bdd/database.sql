@@ -1,12 +1,12 @@
 -- Table de base pour héro
 CREATE TABLE Hero (
     hero_id INT PRIMARY KEY AUTO_INCREMENT,
-    nom VARCHAR(255) NOT NULL,
+//    nom VARCHAR(255) NOT NULL,
     identite_secrete VARCHAR(255) NOT NULL,
     sexe ENUM('Masculin', 'Féminin') NOT NULL,
     couleur_cheveux VARCHAR(50),
     planete_origine VARCHAR(255),
-    descriptio TEXT,
+   // descriptio TEXT,
     UNIQUE KEY (nom, identite_secrete)
 );
 
