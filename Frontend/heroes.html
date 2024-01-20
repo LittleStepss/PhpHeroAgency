@@ -3,15 +3,23 @@
 
 <head>
     <title>Héros</title>
+    <link rel="stylesheet" type="text/css" href="heroes.css">
     <style>
-        /*CSS ici */
+        body {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 75px;
+            background: #C5C5C5;
+        }
     </style>
 </head>
 
 <body>
     <h1>Héros</h1>
+    <button id="login">Connexion</button>
+    <button id="add">+</button>
     {{range .}}
-    <div>
+    <div class="card">
         <h2>{{.Name}}</h2>
         <p>Identité secrète : {{.SecretIdentity}}</p>
         <p>Genre : {{.Gender}}</p>
@@ -19,6 +27,7 @@
         <p>Planète d'origine : {{.OriginalPlanet}}</p>
     </div>
     {{end}}
-</body>
-
-</html>
+    <footer
+        style="background-color: #6F67D4; height: 75px; position: fixed; bottom: 0; width: 100%; display: flex; justify-content: center; align-items: center;">
+        <a href="mentions_legales.html" style="color: white; text-decoration: none;">Mentions légales</a>
+    </footer>
