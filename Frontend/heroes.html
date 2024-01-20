@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Héros</title>
+    <style>
+        /*CSS ici */
+    </style>
+</head>
+
+<body>
+    <h1>Héros</h1>
+    {{range .}}
+    <div>
+        <h2>{{.Name}}</h2>
+        <p>Identité secrète : {{.SecretIdentity}}</p>
+        <p>Genre : {{.Gender}}</p>
+        <p>Couleur de cheveux : {{.HairColor}}</p>
+        <p>Planète d'origine : {{.OriginalPlanet}}</p>
+    </div>
+    {{end}}
+</body>
+
+</html>
