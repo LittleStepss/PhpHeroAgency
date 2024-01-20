@@ -11,7 +11,7 @@ Une agence spéciale de super héros qui aimerait simplifier ses manières de fa
 3. Copiez le fichier `.env.example` en `.env` et configurez votre base de données
 4. Lancez les migrations avec `php artisan migrate`
 5. Lancez le serveur avec `php artisan serve`
-6. Dans le fichier Frontend lancez la commande `go run main.go`
+6. Dans le dossier Frontend lancez la commande `go run main.go`
 
 ## Utilisation
 
