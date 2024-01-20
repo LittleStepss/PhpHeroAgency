@@ -3,13 +3,29 @@
 
 <head>
     <title>Héros</title>
-    <link rel="stylesheet" type="text/css" href="heroes.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         body {
             margin: 0;
             padding: 0;
             margin-bottom: 75px;
             background: #C5C5C5;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            flex: 1 0 30%;
+            margin: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -18,16 +34,21 @@
     <h1>Héros</h1>
     <button id="login">Connexion</button>
     <button id="add">+</button>
-    {{range .}}
-    <div class="card">
-        <h2>{{.Name}}</h2>
-        <p>Identité secrète : {{.SecretIdentity}}</p>
-        <p>Genre : {{.Gender}}</p>
-        <p>Couleur de cheveux : {{.HairColor}}</p>
-        <p>Planète d'origine : {{.OriginalPlanet}}</p>
+    <div class="cards-container">
+        {{range .}}
+        <div class="card">
+            <h2>{{.Name}}</h2>
+            <p>Identité secrète : {{.SecretIdentity}}</p>
+            <p>Genre : {{.Gender}}</p>
+            <p>Couleur de cheveux : {{.HairColor}}</p>
+            <p>Planète d'origine : {{.OriginalPlanet}}</p>
+        </div>
+        {{end}}
     </div>
-    {{end}}
     <footer
         style="background-color: #6F67D4; height: 75px; position: fixed; bottom: 0; width: 100%; display: flex; justify-content: center; align-items: center;">
         <a href="mentions_legales.html" style="color: white; text-decoration: none;">Mentions légales</a>
     </footer>
+</body>
+
+</html>
